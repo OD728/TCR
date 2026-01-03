@@ -1,24 +1,26 @@
 // ==UserScript==
 // @name         Twitch Clip Redirect
-// @namespace    https://docs.scriptcat.org/
+// @namespace    https://github.com/OD728/TCR
 // @version      1.0
 // @description  Redirect clips from twitch.tv to clips.twitch.tv
 // @author       RM
-// @downloadURL  https://github.com/OD728/TCR/raw/refs/heads/main/twitch-clips-redirect.user.js
-// @updateURL    https://github.com/OD728/TCR/raw/refs/heads/main/twitch-clips-redirect.user.js
-// @homepageURL  https://github.com/OD728/TCR
+// @license      MIT
 // @match        *://*.twitch.tv/*/clip/*
 // @grant        none
-// @license      MIT
+// @run-at       document-start
+// @homepage     https://github.com/OD728/TCR
+// @downloadURL  https://github.com/OD728/TCR/raw/main/twitch-clips-redirect.user.js
+// @updateURL    https://github.com/OD728/TCR/raw/main/twitch-clips-redirect.user.js
 // ==/UserScript==
 
 (function() {
     'use strict';
-    // Cleaned regex to avoid syntax errors
-    const match = window.location.href.match(/twitch\.tv\/[^/]+\/clip\/([^/?#]+)/);
+
+    // Using a more robust regex that ignores URL parameters and hashes
+    const match = window.location.href.match(/twitch\.tv\/[^/]+\/clip\/([^/?#\s]+)/);
     
     if (match && match[1]) {
+        // use replace to prevent the "back" button from getting stuck in a loop
         window.location.replace("https://clips.twitch.tv/" + match[1]);
     }
-
 })();
