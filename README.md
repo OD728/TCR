@@ -2,36 +2,54 @@
 
 A lightweight tool to automatically redirect Twitch channel-specific clip URLs to the standalone `clips.twitch.tv` format.
 
-![Version](https://img.shields.io/badge/version-1.00-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Compatibility](https://img.shields.io/badge/Userscript%20Managers-Compatible-brightgreen.svg)
+
+## 🚀 Quick Install
+
+**[Click here to install the script directly](https://raw.githubusercontent.com/OD728/TCR/main/twitch-clips-redirect.users.js)**
+*(Requires Tampermonkey or ScriptCat)*
+
+-----
 
 ## The Problem
-Twitch often uses two different URL structures for clips:
-1. `https://www.twitch.tv/username/clip/SlugName`
-2. `https://clips.twitch.tv/SlugName`
 
-The channel-specific version (1) is often slower to load because it initializes the entire channel interface. Additionally, it frequently suffers from a bug where the page **randomly scrolls down automatically upon opening**, forcing you to scroll back up to see the video.
+Twitch often uses two different URL structures for clips:
+
+1.  `https://www.twitch.tv/username/clip/SlugName`
+2.  `https://clips.twitch.tv/SlugName`
+
+The channel-specific version (1) is often slower to load and frequently suffers from a bug where the page randomly scrolls down upon opening.
 
 ## The Solution
+
 This script intercepts requests to the channel-specific URL and instantly redirects you to the clean, standalone clip page.
 
----
+-----
 
 ## Installation
 
-### Userscript (Tampermonkey / Violentmonkey)
-1. Install a userscript manager like [Tampermonkey](https://www.tampermonkey.net/) or [ScriptCat](https://github.com/scriptscat/scriptcat)
-2. Create a "New Userscript".
-3. Paste the code from `twitch-redirect.user.js` (found in this repo).
-4. Save and you're done!
+### 1\. Install a Manager
 
-### Important MV3 Compatibility Note (Chrome/Edge)
-Google's Manifest V3 (MV3) update introduces restrictions that affect some older userscript managers. If you are using a Chromium-based browser (Chrome, Edge) and encounter issues:
-1.  Ensure you have the latest version of your chosen manager.
-2.  Be aware that some managers (like **Tampermonkey** and **Violentmonkey**) offer **MV3-compatible beta versions** or may require the user to manually enable **Developer Mode** to function correctly.
-3.  **Scriptcat** is known for its strong MV3 support.
----
+You must have a userscript manager installed in your browser:
+
+  - [Tampermonkey](https://www.tampermonkey.net/) (Recommended)
+  - [ScriptCat](https://github.com/scriptscat/scriptcat)
+
+### 2\. Enable Developer Mode (Chrome/Edge Users)
+
+Due to Manifest V3 (MV3) restrictions, you **must** enable Developer Mode:
+
+1.  Open `chrome://extensions` in your browser.
+2.  Toggle the **Developer mode** switch in the top right corner.
+
+### 3\. Install the Script
+
+Simply click the link below. Your manager will detect the file and ask if you want to install:
+**[Install Twitch Clip Redirect](https://raw.githubusercontent.com/OD728/TCR/main/twitch-clips-redirect.users.js)**
+
+-----
 
 ## How it Works
-The script uses a Regular Expression (Regex) to identify the "slug" (the unique ID of the clip) and rebuilds the URL.
+
+The script uses a Regular Expression (Regex) to identify the "slug" (the unique ID of the clip) and rebuilds the URL instantly.
