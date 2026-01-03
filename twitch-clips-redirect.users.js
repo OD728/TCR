@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         Twitch Clip Redirect
 // @namespace    https://github.com/OD728
-// @version      1.0
+// @version      1.1
 // @description  Redirect clips from twitch.tv to clips.twitch.tv
 // @author       RM
 // @match        *://*.twitch.tv/*/clip/*
 // @grant        none
 // @license      MIT
-// @downloadURL  https://github.com/OD728/TCR/raw/refs/heads/main/twitch-clips-redirect.users.js
-// @updateURL    https://github.com/OD728/TCR/raw/refs/heads/main/twitch-clips-redirect.users.js
+// @downloadURL  https://github.com/OD728/TCR/raw/main/twitch-clips-redirect.users.js
+// @updateURL    https://github.com/OD728/TCR/raw/main/twitch-clips-redirect.users.js
 // @supportURL   https://github.com/OD728/TCR/issues
 // @homepageURL  https://github.com/OD728/TCR
 // ==/UserScript==
@@ -24,5 +24,3 @@
         window.location.replace("https://clips.twitch.tv/" + match[1]);
     }
 })();
-
-
