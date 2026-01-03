@@ -33,7 +33,7 @@ This script intercepts requests to the channel-specific URL and instantly redire
 
 You must have a userscript manager installed in your browser:
 
-  - [Tampermonkey](https://www.tampermonkey.net/) (Recommended)
+  - [Tampermonkey](https://www.tampermonkey.net/)
   - [ScriptCat](https://github.com/scriptscat/scriptcat)
 
 ### 2\. Enable Developer Mode (Chrome/Edge Users)
