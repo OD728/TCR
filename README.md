@@ -20,12 +20,17 @@ This script intercepts requests to the channel-specific URL and instantly redire
 
 ## Installation
 
-### Option 1: Userscript (Tampermonkey / Violentmonkey)
+### Userscript (Tampermonkey / Violentmonkey)
 1. Install a userscript manager like [Tampermonkey](https://www.tampermonkey.net/) or [ScriptCat](https://github.com/scriptscat/scriptcat)
 2. Create a "New Userscript".
 3. Paste the code from `twitch-redirect.user.js` (found in this repo).
 4. Save and you're done!
 
+### Important MV3 Compatibility Note (Chrome/Edge)
+Google's Manifest V3 (MV3) update introduces restrictions that affect some older userscript managers. If you are using a Chromium-based browser (Chrome, Edge) and encounter issues:
+1.  Ensure you have the latest version of your chosen manager.
+2.  Be aware that some managers (like **Tampermonkey** and **Violentmonkey**) offer **MV3-compatible beta versions** or may require the user to manually enable **Developer Mode** to function correctly.
+3.  **Scriptcat** is known for its strong MV3 support.
 ---
 
 ## How it Works
