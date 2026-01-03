@@ -11,7 +11,7 @@ Twitch often uses two different URL structures for clips:
 1. `https://www.twitch.tv/username/clip/SlugName`
 2. `https://clips.twitch.tv/SlugName`
 
-The channel-specific version (1) can sometimes load slower or include extra site elements that you might want to avoid when sharing or viewing clips.
+The channel-specific version (1) is often slower to load because it initializes the entire channel interface. Additionally, it frequently suffers from a bug where the page **randomly scrolls down automatically upon opening**, forcing you to scroll back up to see the video.
 
 ## The Solution
 This script intercepts requests to the channel-specific URL and instantly redirects you to the clean, standalone clip page.
