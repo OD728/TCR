@@ -48,6 +48,13 @@ Due to Manifest V3 (MV3) restrictions, you **must** enable Developer Mode:
 Simply click the link below. Your manager will detect the file and ask if you want to install:
 **[Install Twitch Clip Redirect](https://raw.githubusercontent.com/OD728/TCR/main/twitch-clips-redirect.users.js)**
 
+If the automatic link doesn't work, follow these steps:
+1. Open your userscript manager.
+2. Click the **"Create a new script"** button (usually a plus `+` icon).
+3. Delete any default placeholder code.
+4. Copy the full code from **[this link](https://raw.githubusercontent.com/OD728/TCR/main/twitch-clips-redirect.users.js)** and paste it into the editor.
+5. Press `File` > `Save` or `Ctrl+S`.
+
 -----
 
 ## How it Works
